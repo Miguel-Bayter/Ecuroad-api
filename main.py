@@ -40,7 +40,7 @@ async def lifespan(app: FastAPI):
 def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(
-        title="EcuRoad API",
+        title="EduRoad API",
         version="0.1.0",
         lifespan=lifespan,
         docs_url="/api/docs",
@@ -101,6 +101,10 @@ def create_app() -> FastAPI:
     app.include_router(carreras_router, prefix="/api/carreras", tags=["carreras"])
     app.include_router(perfiles_router, prefix="/api/perfiles", tags=["perfiles"])
     app.include_router(admin_router, prefix="/api/admin", tags=["admin"])
+
+    @app.get("/", include_in_schema=False)
+    async def root():
+        return RedirectResponse(url="/api/docs")
 
     @app.get("/api/health")
     async def health():

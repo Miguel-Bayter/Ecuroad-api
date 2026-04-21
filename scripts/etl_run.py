@@ -51,7 +51,7 @@ async def run(source: str, url: str, dry_run: bool, expected_hash: str | None) -
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="EcuRoad ETL runner")
+    parser = argparse.ArgumentParser(description="EduRoad ETL runner")
     parser.add_argument("--source", required=True, choices=ParserFactory.available_sources())
     parser.add_argument("--url", required=True)
     parser.add_argument("--dry-run", action="store_true")

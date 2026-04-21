@@ -357,7 +357,7 @@ async def main(reset: bool) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Seed EcuRoad careers database.")
+    parser = argparse.ArgumentParser(description="Seed EduRoad careers database.")
     parser.add_argument("--reset", action="store_true", help="Delete all careers before seeding.")
     args = parser.parse_args()
     asyncio.run(main(reset=args.reset))
