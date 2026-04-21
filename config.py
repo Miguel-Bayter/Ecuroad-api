@@ -7,10 +7,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # Required — startup fails if missing
     MONGODB_URI: str
-    PORT: int
     CLIENT_ORIGIN: str
     SESSION_TOKEN_SECRET: str
     ADMIN_API_KEY_HASH: str
+
+    # Optional
+    PORT: int = 8000
 
     # Optional
     LOG_LEVEL: str = "info"
