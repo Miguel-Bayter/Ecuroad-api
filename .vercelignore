@@ -1,0 +1,7 @@
+server/.venv
+server/__pycache__
+server/tests
+server/logs
+server/.env
+server/uv.lock
+server/requirements-dev.txt

@@ -15,6 +15,10 @@ env/
 
 # Environment variables
 .env
+.env.local
+
+# Vercel
+.vercel/
 
 # Logs
 logs/
@@ -24,16 +28,11 @@ logs/
 .vscode/
 .idea/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Vercel
-.vercel/
-
 # Test coverage
 .coverage
 htmlcov/
 .pytest_cache/
 
-.vercel
+# OS
+.DS_Store
+Thumbs.db
